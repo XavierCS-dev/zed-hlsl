@@ -1,5 +1,6 @@
 name = "HLSL"
 grammar = "hlsl"
+path_suffixes = ["hlsl"]
 line_comments = ["// "]
 brackets = [
     { start = "(", end = ")", close = true, newline = true },

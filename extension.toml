@@ -1,6 +1,6 @@
 id = "hlsl"
 name = "HLSL"
-version = "0.0.1"
+version = "0.0.2"
 schema_version = 1
 authors = ["shiruba"]
 description = "HLSL language support."

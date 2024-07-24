@@ -2,6 +2,7 @@ struct HLSLExtension {}
 
 impl zed_extension_api::Extension for HLSLExtension {
     fn new() -> Self {
+        println!("test");
         Self {}
     }
 
@@ -19,3 +20,4 @@ impl zed_extension_api::Extension for HLSLExtension {
 }
 
 zed_extension_api::register_extension!(HLSLExtension);
+//
