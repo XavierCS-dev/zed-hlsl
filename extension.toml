@@ -5,3 +5,7 @@ schema_version = 1
 authors = ["shiruba"]
 description = "HLSL language support."
 repository = "https://github.com/XavierCS-dev/zed-hlsl"
+
+[grammars.hlsl]
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-hlsl"
+commit = "80517ca13317fb8591503c0d99f2ad76e8979a72"
