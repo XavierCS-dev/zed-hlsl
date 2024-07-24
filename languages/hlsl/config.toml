@@ -1,0 +1,9 @@
+name = "HLSL"
+grammar = "hlsl"
+line_comments = ["// "]
+brackets = [
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["string"] },
+    { start = "'", end = "'", close = true, newline = false, not_in = ["string", "comment"] },
+]

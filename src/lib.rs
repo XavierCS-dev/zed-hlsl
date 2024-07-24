@@ -1,14 +1,21 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+struct HLSLExtension {}
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+impl zed_extension_api::Extension for HLSLExtension {
+    fn new() -> Self {
+        Self {}
+    }
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn language_server_command(
+        &mut self,
+        _: &zed_extension_api::LanguageServerId,
+        _: &zed_extension_api::Worktree,
+    ) -> zed_extension_api::Result<zed_extension_api::Command> {
+        Ok(zed_extension_api::Command {
+            command: String::new(),
+            args: Vec::new(),
+            env: Vec::new(),
+        })
     }
 }
+
+zed_extension_api::register_extension!(HLSLExtension);

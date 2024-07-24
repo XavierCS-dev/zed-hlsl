@@ -3,6 +3,13 @@ name = "zed-hlsl"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
 
 [dependencies]
+zed_extension_api = "0.0.6"
+
+[grammars.hlsl]
+repository = "https://github.com/tree-sitter-grammars/tree-sitter-hlsl"
+commit = "80517ca13317fb8591503c0d99f2ad76e8979a72"
